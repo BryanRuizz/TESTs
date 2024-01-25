@@ -1,0 +1,18 @@
+.today{
+    height: auto;
+    width: 100%;    
+    /* background: chartreuse; */
+    position: relative;
+    top: 0;
+    right: 0; 
+    /* margin-right: 100%; */
+}
+.butons{
+   
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    margin: 5px;
+}

@@ -1,16 +1,20 @@
 import React from 'react';
 
 import './App.css';
-import VistaPackage from './componentes/vistapackages';
+import Shipments from './componentes/shipments';
+import FutureShipments from './componentes/futureShipments';
+import {Couriers,Packages} from './api/data'
+
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-      <h1>FAILED</h1> 
+        <h1>FAILED</h1>
       </header>
-      <VistaPackage />
-
+      <Shipments />
+      <FutureShipments />
     </div>
   );
 }

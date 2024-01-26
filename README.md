@@ -8,4 +8,13 @@ the the part 2 o projectNameSaolution or a highlight will show a mark of that ar
 
 3.- Remember always read the problem in the part one in one readme inside of the part one will be there a readme with the context of the problem.
 
-4.- no matter what!,  you can come true urs goals.
+4.- no matter what!,  you can come true your goals
+---------------------------------------------------------------
+
+¿How to install an application react?
+
+1.- Clone the repo then open a cmd  terminal
+2.- Lookup folder of the project since CMD 
+3.- Put the next command "npm install"
+4.- npm start 
+

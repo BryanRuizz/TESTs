@@ -1,12 +1,14 @@
-.today{
-    height: auto;
-    width: 100%;    
-    /* background: chartreuse; */
-    position: relative;
-    top: 0;
-    right: 0; 
-    /* margin-right: 100%; */
+.titleone{
+    height: 3.5rem;
+    width: 100%;
+    /* background: red; */
 }
+.today{
+    /* background: chartreuse; */
+    position: fixed;
+   
+}
+
 .butons{
    
     align-items: center;

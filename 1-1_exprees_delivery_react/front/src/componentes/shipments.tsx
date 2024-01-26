@@ -1,10 +1,13 @@
 import React from 'react';
-import '../css/vistapackage.css'
+import '../css/shipments.css'
 import { Button, Table } from 'react-bootstrap';
 
-function VistaPackage() {
+function Shipments() {
     return (<>
-        <h2 className='today'>Today</h2>
+        <div className='titleone'>
+            <h2 className='today'>Today</h2>
+        </div>
+
         <div className="container-lg" style={{ background: "grey" }}>
             <Table striped bordered hover>
                 <thead>
@@ -35,8 +38,6 @@ function VistaPackage() {
                             <Button className='btn'>COMPLETE</Button>
                             <br />
                             <Button>DELAY</Button>
-                            <br />
-                            <Button>Asigne</Button>
                         </td>
                         <td>package1</td>
                     </tr>
@@ -48,4 +49,4 @@ function VistaPackage() {
     </>);
 }
 
-export default VistaPackage;
+export default Shipments;

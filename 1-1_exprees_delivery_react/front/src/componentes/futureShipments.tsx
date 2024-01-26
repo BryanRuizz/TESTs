@@ -19,7 +19,7 @@ function FutureShipments() {
         </thead>
         <tbody>
           <tr>
-            <td>Mark</td>
+            <td>Packages 2</td>
             <td>DELAYED</td>
           </tr>
         </tbody>

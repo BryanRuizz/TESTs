@@ -19,8 +19,8 @@ function Shipments() {
     const assing = () => {
        
         const PackagesNew: any[] = Packages.map((pkg, index) => {
-            const courierName = index < Couriers.length ? Couriers[index].name : ''; // Obtener el nombre del mensajero si está disponible
-            return { ...pkg, user: courierName }; // Agregar el nombre del mensajero como un nuevo atributo llamado user
+            const courierName = index < Couriers.length ? Couriers[index].name : ''; // 
+            return { ...pkg, user: courierName }; // 
         });
         setInf(PackagesNew);
         setOne(true);

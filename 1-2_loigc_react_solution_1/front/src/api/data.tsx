@@ -7,21 +7,21 @@ const Couriers = [
 ];
 
 const Packages = [
-    { name: 'Paquete1',  distance: 1 },
-    { name: 'Paquete2',  distance: 2 },
-    { name: 'Paquete3',  distance: 3 },
-    { name: 'Paquete4',  distance: 4 },
-    { name: 'Paquete5',  distance: 6 },
-    { name: 'Paquete6',  distance: 7 },
-    { name: 'Paquete7',  distance: 8 },
-    { name: 'Paquete8',  distance: 9 },
-    { name: 'Paquete9',  distance: 10 },
-    { name: 'Paquete10', distance: 11 },
-    { name: 'Paquete11', distance: 12 },
-    { name: 'Paquete12', distance: 13 },
-    { name: 'Paquete13', distance: 14 },
-    { name: 'Paquete14', distance: 15 },
-    { name: 'Paquete15', distance: 16 }
+    { name: 'Package1',  distance: 1 },
+    { name: 'Package2',  distance: 2 },
+    { name: 'Package3',  distance: 3 },
+    { name: 'Package4',  distance: 4 },
+    { name: 'Package5',  distance: 6 },
+    { name: 'Package6',  distance: 7 },
+    { name: 'Package7',  distance: 8 },
+    { name: 'Package8',  distance: 9 },
+    { name: 'Package9',  distance: 10 },
+    { name: 'Package10', distance: 11 },
+    { name: 'Package11', distance: 12 },
+    { name: 'Package12', distance: 13 },
+    { name: 'Package13', distance: 14 },
+    { name: 'Package14', distance: 15 },
+    { name: 'Package15', distance: 16 }
   ];
 
 export { Couriers, Packages };

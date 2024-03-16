@@ -14,7 +14,7 @@ function App() {
         <h1>FAILED</h1>
       </header>
       <Shipments />
-      <FutureShipments />
+      {/* <FutureShipments /> */}
     </div>
   );
 }

@@ -2,8 +2,13 @@ import React from 'react';
 import './../css/futureship.css'
 import { Table } from 'react-bootstrap';
 
+interface future {
+  one: boolean;
+  inf: any[];
+}
 
-function FutureShipments() {
+
+function FutureShipments(props: future) {
 
   return (<>
     <div className='titleone'>
@@ -18,10 +23,27 @@ function FutureShipments() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Packages 2</td>
-            <td>DELAYED</td>
-          </tr>
+
+
+          {
+            props.one === true ? (
+              props.inf?.map((item: any, index: number) => (
+                item.user === '' ? (
+
+                  <tr>
+                    <td>
+                      <h3 className='packcss' key={index}>{item.name}</h3>
+                    </td>
+                    <td>DELAYED</td>
+                  </tr>
+
+                ) : (<></>)
+              ))
+            ) : (<></>)
+          }
+
+
+
         </tbody>
       </Table>
 

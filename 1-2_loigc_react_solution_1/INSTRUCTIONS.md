@@ -2,7 +2,7 @@
 **I found this exercise in coderbyte**
 
 
--- Xpress delivery is a parcial company that needs to create a samall application to organize daily shipments among its couries. 
+-- Xpress delivery is a parcial company that needs to create a small application to organize daily shipments among its couries. 
 Xpress delivery has a several problems when organizing shipments manually and would like you to applay all your knowledge to 
 organize them.
 
@@ -15,7 +15,7 @@ ex:
 -----------------------------------------------------------------------------------
 | name       |      munimum number deliver per day    |   maximum numer per day    |
 -----------------------------------------------------------------------------------
-| calros     |                    1                   |        1                   |    
+| carlos     |                    1                   |        1                   |    
 | maria      |                    1                   |        2                   |
 | juan       |                    1                   |        3                   |
 ------------------------------------------------------------------------------------

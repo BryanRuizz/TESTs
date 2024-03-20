@@ -8,41 +8,41 @@ import FutureShipments from './futureShipments';
 function Shipments() {
     // sort is a method who order the array, needs two elements to compar
     const [data, setData] = useState<any>(Couriers.sort((a, b) => b.maxpackages - a.maxpackages));
-    const [inf,setInf] = useState<any>(Packages);
+    const [inf, setInf] = useState<any>(Packages);
 
-    const [delayed,setDelayed] = useState<any>([]);
-    const [one,setOne] = useState(false);
+    const [delayed, setDelayed] = useState<any>([]);
+    const [one, setOne] = useState(false);
     const [hidden, setHidden] = useState(false);
     const [comp, setComp] = useState(false);
     console.log("this are my", Couriers, Packages);
 
     const assing = () => {
-       
+
         const PackagesNew: any[] = Packages.map((pkg, index) => {
             const courierName = index < Couriers.length ? Couriers[index].name : ''; // 
             return { ...pkg, user: courierName }; // 
         });
         setInf(PackagesNew);
         setOne(true);
-        console.log("packnew :",PackagesNew);
+        console.log("packnew :", PackagesNew);
     }
 
-    const delayespa =()=>{
+    const delayespa = () => {
         // if(inf === [])
         setHidden(true);
         setDelayed(inf);
     }
-    const comple =()=>{
-        if(comp ===false){
+    const comple = () => {
+        if (comp === false) {
 
             setComp(true);
         }
-        else{
-            
-        setComp(false);
+        else {
+
+            setComp(false);
         }
     }
-console.log("var one: ",one);
+    console.log("var one: ", one);
     return (<>
         <div className='titleone'>
             <h2 className='today'>Today</h2>
@@ -72,8 +72,10 @@ console.log("var one: ",one);
                         <td>
                             {
                                 data?.map((item: any, index: number) => (
-                                    <h2 className='namecss'  key={index} style={{ background: comp === true && index ===0 ? 'green' : '' }} >{item.name}</h2>
-                                    // Names deliveries
+                                    <tr style={{ background: comp === true && index === 0 ? 'green' : '' }}>
+                                        <h2 className='namecss' key={index}  >{item.name}</h2>
+
+                                    </tr>
                                 ))
                             }
                         </td>
@@ -84,7 +86,7 @@ console.log("var one: ",one);
                         <td>
                             {
                                 data?.map((item: any, index: number) => (
-                                    <h2 className='namecss' key={index} style={{ background: comp === true && index ===0 ? 'green' : '' }} >{item.maxpackages}</h2>
+                                    <h2 className='namecss' key={index} style={{ background: comp === true && index === 0 ? 'green' : '' }} >{item.maxpackages}</h2>
                                     // max packages
                                 ))
                             }
@@ -92,51 +94,61 @@ console.log("var one: ",one);
 
                         <td>
                             {
-                                one === false?(<></>):(
-                                 inf?.map((item: any, index: number) => (
-                                    
-                                    item.user ===''?(
-                                        <div key={index}></div>
-                                    ):(
-                                        <h2 className='namecss' key={index} style={{ background: comp === true && index ===0 ? 'green' : '' }} >{item.name}</h2>
-                                        // name packages
-                                    )
-                                    
-                                )))
+                                one === false ? (<></>) : (
+                                    inf?.map((item: any, index: number) => (
+
+                                        item.user === '' ? (
+                                            <div key={index}></div>
+                                        ) : (
+                                            <h2 className='namecss' key={index} style={{ background: comp === true && index === 0 ? 'green' : '' }} >{item.name}</h2>
+                                            // name packages
+                                        )
+
+                                    )))
                             }
                         </td>
-                        <td style={{ background: comp === true? '' : '' }}>on the way</td>
+                        <td style={{ background: comp === true ? '' : '' }}>on the way</td>
 
-                        <td className='butons' style={{ background: comp === true  ? 'green' : '' }}>
-                            <Button className='btn'  onClick={comple}>COMPLETE</Button>
-                            <br />
-                            <Button onClick={delayespa}>DELAY</Button>
-                            <br />
-                            <Button onClick={assing}>Assing</Button>
+                        <td >
+
+                            <tr className='butons' style={{ background: comp === true ? 'green' : '' }}>
+                                <Button className='btn' onClick={comple}>COMPLETE</Button>
+                            </tr>
+
+                            <tr>
+                                <br />
+                                <Button onClick={delayespa}>DELAY</Button>
+                            </tr>
+                            <tr>
+                                <br />
+                                <Button onClick={assing}>Assing</Button>
+                            </tr>
+
                         </td>
+
                         <td>
                             {
-                                hidden===true?(<></>):(
-                                inf?.map((item: any, index: number) => (
-                                    one===true?(
-                                        item.user===''?(
-                                        <h3 className='packcss' key={index} style={{ background: comp === true && index ===0 ? 'green' : '' }} >{item.name}</h3>
-                                        ):( <div key={index}></div>)
-                                    ):(
-                                    <h3 className='packcss' key={index} style={{ background: comp === true && index ===0 ? 'green' : '' }}>{item.name}</h3>
-                                    // packages last colum
-                                    )
-                                ))
+                                hidden === true ? (<></>) : (
+                                    inf?.map((item: any, index: number) => (
+                                        one === true ? (
+                                            item.user === '' ? (
+                                                <h3 className='packcss' key={index} style={{ background: comp === true && index === 0 ? 'green' : '' }} >{item.name}</h3>
+                                            ) : (<div key={index}></div>)
+                                        ) : (
+                                            <h3 className='packcss' key={index} style={{ background: comp === true && index === 0 ? 'green' : '' }}>{item.name}</h3>
+                                            // packages last colum
+                                        )
+                                    ))
                                 )
                             }
                         </td>
                     </tr>
                     {/* Agregar más filas según sea necesario */}
                 </tbody>
-            </Table>
-            
+            </Table >
 
-        </div>
+
+        </div >
 
         <FutureShipments one={one} inf={delayed} />
     </>);
